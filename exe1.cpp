@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "Sequence.h"
+#include "Sequence.cpp"
 
 using namespace std;
 

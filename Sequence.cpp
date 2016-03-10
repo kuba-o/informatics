@@ -28,8 +28,11 @@ double Sequence::get(int i){
 }
 
 Sequence::Sequence(void){ cout<< "constructor" <<endl;}
-Sequence::Sequence(Sequence &obj){
-	Sequence seq;
-	// memcpy(data, obj.data, N);
-	memcpy ( &seq, &obj, sizeof(obj) );
+
+Sequence Sequence::operator + (const Sequence& seq){
+	Sequence tmp;
+	for (int i=0; i<N; ++i){
+		tmp.data[i] = this->data[i] + seq.data[i];
+	}
+	return tmp;
 }
