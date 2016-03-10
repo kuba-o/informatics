@@ -43,3 +43,11 @@ bool Sequence::operator == (const Sequence& seq){
 	}
 	return true;
 }
+
+Sequence Sequence::operator * (int m){
+	Sequence tmp;
+	for (int i=0; i<N; i++){
+		this->data[i]*=m;
+	}
+	return tmp;
+}

@@ -18,6 +18,6 @@ public:
 	double get(int i);
 	bool set(int i, double v);
 	Sequence operator+(const Sequence& seq);
-	Sequence operator*(const Sequence& seq);
+	Sequence operator*(int m);
 	bool operator==(const Sequence& seq);
 };

@@ -14,10 +14,15 @@ int main(){
 	
 	Sequence s3;
 	s3 = s1 + s2;
-	cout<<s3.get(2)<<endl;
+	// cout<<s3.get(2)<<endl;
 
 	bool s4;
 	s4 = s1 == s2;
-	cout<<s4<<endl;
+	// cout<<s4<<endl;
+	
+	cout<<"s1 1, before: "<<s1.get(1)<<endl;
+	s1 * 3;
+	cout<<"s1 1, after: "<<s1.get(1)<<endl;
+
 	return 0;
 }
