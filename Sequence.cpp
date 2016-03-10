@@ -7,9 +7,6 @@ using namespace std;
 
 Sequence::~Sequence(void){}
 
-void Sequence::hi2(){cout<<"DZIALA"<<endl;}
-void Sequence::hi(){cout<<"TEST";}
-
 bool Sequence::set(int i, double v){
 	if (i>=0 && i <N){
 		data[i]=v;
@@ -27,7 +24,7 @@ double Sequence::get(int i){
 	}	
 }
 
-Sequence::Sequence(void){ cout<< "constructor" <<endl;}
+Sequence::Sequence(void){}
 
 Sequence Sequence::operator + (const Sequence& seq){
 	Sequence tmp;
@@ -35,4 +32,14 @@ Sequence Sequence::operator + (const Sequence& seq){
 		tmp.data[i] = this->data[i] + seq.data[i];
 	}
 	return tmp;
+}
+
+bool Sequence::operator == (const Sequence& seq){
+	Sequence tmp;
+	for (int i=0; i<N; ++i){
+		if (this->data[i] != seq.data[i]){
+			return false;
+		}
+	}
+	return true;
 }

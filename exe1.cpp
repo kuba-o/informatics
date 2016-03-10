@@ -6,16 +6,18 @@
 using namespace std;
 
 int main(){
-	Sequence sequence;
-	cout<<"tu sie stworzylo bez napisu"<<endl;
-	Sequence test;
-	test.hi();
-	sequence.hi();
-	sequence.hi2();
-	sequence.set(1,2);
-	cout<<sequence.get(3)<<"throw"<<endl;
-	cout<<sequence.get(1)<<"OK"<<endl;
+	Sequence s1, s2;
+	s1.set(1,1);
+	s1.set(2,2);
+	s2.set(1,1);
+	s2.set(2,2);
+	
+	Sequence s3;
+	s3 = s1 + s2;
+	cout<<s3.get(2)<<endl;
 
-	// cout<<seq.data[2]<<endl;
+	bool s4;
+	s4 = s1 == s2;
+	cout<<s4<<endl;
 	return 0;
 }
