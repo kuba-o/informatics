@@ -34,6 +34,28 @@ Sequence Sequence::operator + (const Sequence& seq){
 	return tmp;
 }
 
+Sequence Sequence::operator + (double offset){
+	Sequence tmp;
+	for(int i=0; i<N; ++i){
+		tmp.data[i] = data[i] + offset;
+	}
+	return tmp;
+}
+
+double& Sequence::operator [](int at) throw(int){
+	if (at<0 || at>N)
+		throw at;
+	return data[at];
+}
+
+Sequence& Sequence::operator += (const Sequence& seq){
+	for(int i=0; i<N; ++i){
+		data[i] += seq.data[i];
+	}
+	return *this;
+}
+
+
 bool Sequence::operator == (const Sequence& seq){
 	Sequence tmp;
 	for (int i=0; i<N; ++i){
