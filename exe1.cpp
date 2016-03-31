@@ -24,5 +24,7 @@ int main(){
 	s1 * 3;
 	cout<<"s1 1, after: "<<s1.get(1)<<endl;
 
+	// cin >> s1;
+
 	return 0;
 }

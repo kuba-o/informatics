@@ -21,4 +21,22 @@ public:
 	Sequence& operator+=(const Sequence& seq);
 	Sequence operator*(int m);
 	bool operator==(const Sequence& seq);
+
+	friend ostream& operator <<(ostream& s, const Sequence& seq){
+		s<<endl;
+		for (double d : seq.data){
+			s<<" "<<d;
+		}
+		return s;
+	}
+
+	friend istream& operator >>(istream& s, Sequence& seq){
+		int nr = 0;
+		for (double& d : seq.data){
+			cout<<"Enter element number "<<nr<<": ";
+			nr++;
+			s>>d;
+		}
+		return s;
+	}	
 };
